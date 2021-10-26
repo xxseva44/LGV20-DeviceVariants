@@ -14,8 +14,8 @@
 # limitations under the License.
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_h990.mk
+    $(LOCAL_DIR)/lighthouse_h990.mk
 
 COMMON_LUNCH_CHOICES := \
-    lineage_h990-userdebug \
-    lineage_h990-eng
+    lighthouse_h990-userdebug \
+    lighthouse_h990-eng

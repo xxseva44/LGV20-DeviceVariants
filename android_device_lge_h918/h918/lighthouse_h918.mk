@@ -19,22 +19,22 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 # Inherit some common Lineage stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+$(call inherit-product, vendor/lineage/config/common.mk)
 
-# Inherit from vs995 device
-$(call inherit-product, device/lge/vs995/device.mk)
+# Inherit from h918 device
+$(call inherit-product, device/lge/h918/device.mk)
 
 # Set those variables here to overwrite the inherited values.
-PRODUCT_DEVICE := vs995
-PRODUCT_NAME := lineage_vs995
+PRODUCT_DEVICE := h918
+PRODUCT_NAME := lighthouse_h918
 PRODUCT_BRAND := lge
-PRODUCT_MODEL := LG-VS995
+PRODUCT_MODEL := LG-H918
 PRODUCT_MANUFACTURER := LGE
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     TARGET_DEVICE="elsa" \
     PRODUCT_DEVICE="elsa" \
-    PRODUCT_NAME="elsa_vzw_us" \
-    PRIVATE_BUILD_DESC="elsa_vzw-user 8.0.0 OPR1.170623.032 183141449275f release-keys"
+    PRODUCT_NAME="elsa_tmo_us" \
+    PRIVATE_BUILD_DESC="elsa_tmo_us-user 8.0.0 OPR1.170623.032 1831917495b33 release-keys"
 
-BUILD_FINGERPRINT := "lge/elsa_vzw/elsa:8.0.0/OPR1.170623.032/183141449275f:user/release-keys"
+BUILD_FINGERPRINT := "lge/elsa_tmo_us/elsa:8.0.0/OPR1.170623.032/1831917495b33:user/release-keys"
