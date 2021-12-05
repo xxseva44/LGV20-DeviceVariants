@@ -18,7 +18,7 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
 # Get non-open-source specific aspects
-$(call inherit-product, vendor/lge/h910/h910-vendor.mk)
+$(call inherit-product, vendor/lge/h990/h990-vendor.mk)
 
 # Properties
 -include $(LOCAL_PATH)/vendor_prop.mk
@@ -31,8 +31,15 @@ $(call inherit-product, device/lge/v20-common/v20.mk)
 
 # Sensors
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/sensors/sensor_def_elsa_att_us.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/sensor_def_variable.conf
+    $(LOCAL_PATH)/configs/sensors/sensor_def_elsa_global_com.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/sensor_def_variable.conf
 
 # WiFi Calibration
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/wifi/bcmdhd.cal:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/bcmdhd.cal
+
+# Device init scripts
+PRODUCT_PACKAGES += \
+    rild2.rc
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.radio.multisim.config=dsds

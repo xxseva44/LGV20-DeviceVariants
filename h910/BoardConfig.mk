@@ -14,15 +14,17 @@
 # limitations under the License.
 #
 
-DEVICE_PATH := device/lge/h910
+DEVICE_PATH := device/lge/h990
 
 # inherit from common v20
 -include device/lge/v20-common/BoardConfigCommon.mk
 
-TARGET_OTA_ASSERT_DEVICE := h910,us996,elsa,h915
+TARGET_OTA_ASSERT_DEVICE := h990,us996,elsa
 
 # Kernel
-TARGET_KERNEL_CONFIG := lineageos_h910_defconfig
+TARGET_KERNEL_CONFIG := lineageos_h990_defconfig
+
+BOARD_KERNEL_CMDLINE += model.name=LG-H990ds lge.sim_num=2
 
 # inherit from the proprietary version
-include vendor/lge/h910/BoardConfigVendor.mk
+include vendor/lge/h990/BoardConfigVendor.mk
