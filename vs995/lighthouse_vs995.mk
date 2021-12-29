@@ -15,18 +15,20 @@
 #
 
 # Inherit from those products. Most specific first.
+# These vary from rom to rom, change accordingly. 
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-# Inherit some common Lineage stuff.
-$(call inherit-product, vendor/lineage/config/common.mk)
+# Inherit some common rom stuff. Change the directory according to the rom.
+$(call inherit-product, vendor/lighthouse/config/common.mk)
 
 # Inherit from vs995 device
 $(call inherit-product, device/lge/vs995/device.mk)
 
 # Set those variables here to overwrite the inherited values.
+# Change PRODUCT_NAME according to your rom
 PRODUCT_DEVICE := vs995
-PRODUCT_NAME := lighthouse_vs995
+PRODUCT_NAME := lighthouse_vs995 
 PRODUCT_BRAND := lge
 PRODUCT_MODEL := LG-VS995
 PRODUCT_MANUFACTURER := LGE
