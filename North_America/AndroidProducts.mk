@@ -14,8 +14,8 @@
 # limitations under the License.
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lighthouse_vs995.mk
+    $(LOCAL_DIR)/lighthouse_na.mk
 
 COMMON_LUNCH_CHOICES := \
-    lighthouse_vs995-userdebug \
-    lighthouse_vs995-eng
+    lighthouse_na-userdebug \
+    lighthouse_na-eng
